@@ -1,8 +1,14 @@
 {
-  "jupyter.lab.shortcuts": [],
-  "title": "grundkurs_theme",
-  "description": "grundkurs_theme settings.",
-  "type": "object",
-  "properties": {},
-  "additionalProperties": false
+  "title": "Grundkurs Theme",
+  "description": "Settings of the grundkurs theme.",
+  "properties": {
+    "url": {
+      "type": "string",
+      "title": "Url",
+      "description": "Feedback Backend Url",
+      "default": ""
+    }
+  },
+  "additionalProperties": false,
+  "type": "object"
 }
