@@ -62,10 +62,9 @@ const plugin: JupyterFrontEndPlugin<void> = {
           label: 'Send feedback for this assignment',
           execute: async args => {
             const current = getCurrent(tracker, shell, args);
-            if (current) {
-              // Get cellid of current active cell
-              // @ts-ignore
-              const cellId = current.content.activeCell?.model?.modelDB.basePath;
+            // We need a cellId therefore we need an activeCell
+            if (current && current.content.activeCell) {
+              const cellId = current.content.activeCell.model.id;
               const value = args['value'];
               // POST request
               const dataToSend = { cellId: cellId, url, value };
