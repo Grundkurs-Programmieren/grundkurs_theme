@@ -6,7 +6,6 @@ import { CommandRegistry } from '@lumino/commands';
 
 import { ICellFooter, Cell, ICellModel } from '@jupyterlab/cells';
 
-
 /**
  * The CSS classes added to the cell footer.
  */
