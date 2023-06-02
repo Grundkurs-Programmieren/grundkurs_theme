@@ -11,15 +11,7 @@ pre {
   line-height: var(--jp-code-line-height);
 }
 
-.html-output {
-  margin-left: 20px;
-  padding: 5px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
-}
-
-.exercise {
+.gk-exercise {
   margin: 0;
   padding: 10px;
   border-style: solid;
@@ -27,27 +19,27 @@ pre {
   border-color: green;
 }
 
-.exercise-image {
+.gk-exercise-image {
   float: right;
   width: 75px;
 }
 
-.exercise-label {
+.gk-exercise-label {
   padding: 5px;
   border-radius: 5px;
   background-color: green;
   color: white;
 }
 
-table.keywords tr td code {
+table.gk-keywords tr td code {
   background-color: transparent;
 }
 
-table.keywords tr td code.new {
+table.gk-keywords tr td code.new {
   font-weight: bold;
 }
 
-table.keywords tr td code.known {
+table.gk-keywords tr td code.known {
   background-color: lightgreen;
 }
 
@@ -65,20 +57,20 @@ div.gk-cell-feedback-container {
   margin-right: 21px;
 }
 
-.rating {
+.gk-cell-feedback-container .rating {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
-.star {
+.gk-cell-feedback-container .star {
   width: 20px;
   height: 20px;
   margin: 5px;
   cursor: pointer;
 }
 
-.submit-button {
+.gk-cell-feedback-container .submit-button {
   background-color: blue;
   color: white;
   border: none;
@@ -89,18 +81,18 @@ div.gk-cell-feedback-container {
   transition: all 0.3s;
 }
 
-.submit-button:hover {
+.gk-cell-feedback-container .submit-button:hover {
   background-color: deepskyblue;
   transform: translateY(-1px);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.submit-button:active {
+.gk-cell-feedback-container .submit-button:active {
   transform: translateY(1px);
   box-shadow: none;
 }
 
-.submitted-message {
+.gk-cell-feedback-container .submitted-message {
   margin-left: 10px;
   font-size: 12px;
   font-weight: lighter;

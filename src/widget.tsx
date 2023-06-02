@@ -6,6 +6,12 @@ import { CommandRegistry } from '@lumino/commands';
 
 import { ICellFooter, Cell, ICellModel } from '@jupyterlab/cells';
 
+
+/**
+ * The CSS classes added to the cell footer.
+ */
+const CELL_FOOTER_DIV_CLASS = 'gk-cell-feedback-container';
+
 const Rating = ({
   submit
 }: {
@@ -41,7 +47,7 @@ const Rating = ({
 
   return (
     <div className={CELL_FOOTER_DIV_CLASS}>
-      <span className="exercise_label">Feedback</span>
+      <span className="gk-exercise-label">Feedback</span>
       <div className="rating">
         {['😜', '😛', '🙂', '😕', '😖'].map((star, index) => (
           <span onClick={() => handleClick(index)} style={{ margin: '10px' }}>
@@ -79,11 +85,6 @@ const Rating = ({
 };
 
 export default Rating;
-
-/**
- * The CSS classes added to the cell footer.
- */
-const CELL_FOOTER_DIV_CLASS = 'gk-cell-feedback-container';
 
 /**
  * Extend default implementation of a cell footer.
