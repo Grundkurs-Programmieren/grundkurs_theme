@@ -95,6 +95,16 @@
         "access": "public"
     },
     "jupyterlab": {
+        "discovery": {
+            "server": {
+                "managers": [
+                    "pip"
+                ],
+                "base": {
+                    "name": "grundkurs_theme"
+                }
+            }
+        },
         "extension": true,
         "outputDir": "grundkurs_theme/labextension",
         "schemaDir": "schema",

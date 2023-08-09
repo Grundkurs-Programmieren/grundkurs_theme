@@ -44,11 +44,11 @@ class RouteHandler(APIHandler):
         self.finish(json.dumps(data))
 
 
-def setup_handlers(web_app, url_path):
+def setup_handlers(web_app):
     host_pattern = ".*$"
     base_url = web_app.settings["base_url"]
 
     # Prepend the base_url so that it works in a JupyterHub setting
-    route_pattern = url_path_join(base_url, url_path, "feedback")
+    route_pattern = url_path_join(base_url, "grundkurs_theme", "feedback")
     handlers = [(route_pattern, RouteHandler)]
     web_app.add_handlers(host_pattern, handlers)

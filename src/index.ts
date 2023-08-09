@@ -69,12 +69,10 @@ const plugin: JupyterFrontEndPlugin<void> = {
               // POST request
               const dataToSend = { cellId: cellId, url, value };
               try {
-                console.log(JSON.stringify(dataToSend));
-                const reply = await requestAPI<any>('feedback', {
+                await requestAPI<any>('feedback', {
                   body: JSON.stringify(dataToSend),
                   method: 'POST'
                 });
-                console.log(reply);
               } catch (reason) {
                 console.error(
                   `Error on POST /feedback ${dataToSend}.\n${reason}`
