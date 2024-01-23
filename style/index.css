@@ -12,23 +12,37 @@ pre {
 }
 
 .gk-exercise {
-  margin: 0;
   padding: 10px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: green;
+  padding-top: 60px;
+  border-left: 4px solid #059669;
+  border-radius: 5px;
 }
 
+.gk-exercise::before {
+  content: "Aufgabe";
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  left: 6px;
+  padding: 10px;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  width: calc(100% - 60px);
+  background-color: rgba(5, 150, 105, 0.7);
+  border-radius: 5px;
+  background-image: url('https://i.imgur.com/JyhBeDB.png');
+  background-size: 30px; /* Adjust as needed */
+  background-position: left 7px top 10px ; /* Adjust as needed */
+  background-repeat: no-repeat;
+}
+
+/* In case we forget to adapt and exercise */
 .gk-exercise-image {
-  float: right;
-  width: 75px;
+  display: none;
 }
 
 .gk-exercise-label {
-  padding: 5px;
-  border-radius: 5px;
-  background-color: green;
-  color: white;
+  display: none;
 }
 
 table.gk-keywords tr td code {
