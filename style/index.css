@@ -31,8 +31,8 @@ pre {
   background-color: rgba(5, 150, 105, 0.7);
   border-radius: 5px;
   background-image: url('https://i.imgur.com/JyhBeDB.png');
-  background-size: 30px; /* Adjust as needed */
-  background-position: left 7px top 10px ; /* Adjust as needed */
+  background-size: 30px; 
+  background-position: left 7px top 10px ; 
   background-repeat: no-repeat;
 }
 
@@ -57,24 +57,46 @@ table.gk-keywords tr td code.known {
   background-color: lightgreen;
 }
 
-div.gk-cell-feedback-container {
+.gk-cell-feedback-container {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   align-items: flex-end;
-  margin: 0;
-  padding: 10px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: green;
   margin-left: 78px;
-  margin-right: 21px;
+  border-left: 4px solid #059669;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.gk-cell-feedback-container + hr {
+  margin-left: 78px; 
+}
+
+.gk-cell-feedback-container > summary {
+  background-color: rgba(5, 150, 105, 0.7);
+  list-style: none;
+  border-radius: 5px;
+  margin-left: -4px;
+  padding: 10px;
+}
+
+details[open].gk-cell-feedback-container summary svg {
+  transform: rotate(90deg);
+}
+
+.gk-cell-feedback-container summary svg {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 10px;
+  top: 19px;
+  transition: transform 0.2s ease-in-out; /* Add smooth transition */
 }
 
 .gk-cell-feedback-container .rating {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
 }
 
 .gk-cell-feedback-container .star {
@@ -112,5 +134,4 @@ div.gk-cell-feedback-container {
   font-weight: lighter;
   display: flex;
   gap: 5px;
-  justify-content: flex-end;
 }

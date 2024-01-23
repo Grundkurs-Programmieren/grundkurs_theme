@@ -45,8 +45,14 @@ const Rating = ({
   const ratings = ['too easy', 'easy', 'good', 'hard', 'too hard'];
 
   return (
-    <div className={CELL_FOOTER_DIV_CLASS}>
-      <span className="gk-exercise-label">Feedback</span>
+    <>
+    <details className={CELL_FOOTER_DIV_CLASS}> 
+      <summary>
+        Feedback?
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+      </summary>
       <div className="rating">
         {['😜', '😛', '🙂', '😕', '😖'].map((star, index) => (
           <span onClick={() => handleClick(index)} style={{ margin: '10px' }}>
@@ -79,7 +85,9 @@ const Rating = ({
           <b>Us:</b> Thank you for submitting your feedback 🙏
         </div>
       )}
-    </div>
+    </details>
+    <hr></hr>
+  </>
   );
 };
 
